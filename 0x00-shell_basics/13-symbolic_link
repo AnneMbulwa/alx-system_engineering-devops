@@ -1,2 +1,2 @@
-#!/bib/bash
+#!/bin/bash
 ln -sf /bin/ls __ls__
