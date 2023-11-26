@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#display list of current running processes
+#display user-oriented format, show hierarchy, show all process for the user
+ps -auxf
