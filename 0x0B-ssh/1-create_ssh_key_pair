@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Generating a private ssh key for a file school with 4096 bits and
+# protected by passphrase betty
+
+ssh-keygen -t rsa -b 4096 -p betty -f school
