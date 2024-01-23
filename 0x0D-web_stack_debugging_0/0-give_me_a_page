@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# fixing the issue that occurs after connecting container to docker
+# and running curl command
+
+echo "Hello Holberton" >> /etc/apache2.conf
+service apache2 restart
