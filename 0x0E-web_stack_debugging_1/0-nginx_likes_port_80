@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# configuring the server to some specifications given
+
+# Remove default nginx configuration
+rm /etc/nginx/sites-enabled/default
+# creating a symbolic link between the configuration and file location
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# restart the nginx
+server nginx restart

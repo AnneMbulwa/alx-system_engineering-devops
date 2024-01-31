@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# making the fix of #task0 short and sweet
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+server nginx restart
+kill"$(pgrep 'nginx' | head -1)" 
