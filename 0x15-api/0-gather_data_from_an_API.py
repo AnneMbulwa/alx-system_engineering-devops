@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """using REST API for given employees and return information about their
 todo list"""
-
 import requests
-from sys import argv
+import sys
 
 
 if __name__ == "__main__":
@@ -15,4 +14,4 @@ if __name__ == "__main__":
                      for task in todo_list if task.get('completed') is True]
     print("Employee {} is done with task ({}/{}):".format
           (employee_data.get("name"), len(complete_task), len(todo_list)))
-    [print("\t {}".format(x) for x in complete_task]
+    [print("\t {}".format(x)) for x in complete_task]
