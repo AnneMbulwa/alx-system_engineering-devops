@@ -12,8 +12,8 @@ if __name__ == "__main__":
     todo_list = requests.get(url + "todos", params={"userId": user_id}).json()
     username = employee_data.get("username")
 
-    with open ("{}.csv".format(user_id), "w", newline="") as mycsv:
-        write = csv.write(csvfile, qouting = csv.QOUTE_ALL)
+    with open("{}.csv".format(user_id), "w", newline="") as mycsv:
+        write = csv.write(csvfile, qouting=csv.QOUTE_ALL)
         for task in todo_list:
             write.writenow([user_id, username, task.get("completed"),
                             task.get("title")])
