@@ -7,9 +7,9 @@ import sys
 
 if __name__ == "__main__":
     url = 'https://jsonplaceholder.typicode.com/'
-    employee_data = requests.get(url + 'user/{}'.format(sys.argv[1])).json()
-    todo_list = requests.get(url + 'todos', params=
-                             {"UserId": sys.argv[1]}).json()
+    id = sys.argv[1]
+    employee_data = requests.get(url + 'user/{}'.format(id)).json()
+    todo_list = requests.get(url + 'todos', params={"UserId": id}).json()
     complete_task = [task.get('title')
                      for task in todo_list if task.get('completed') is True]
     print("Employee {} is done with task ({}/{}):".format
