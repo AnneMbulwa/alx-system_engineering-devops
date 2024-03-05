@@ -10,8 +10,8 @@ def recurse(subreddit, hot_list=[]):
         "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
     }
     params = {
-        "after": after,
-        "count": count,
+        "after": "after",
+        "count": "count",
         "limit": 100
     }
 
