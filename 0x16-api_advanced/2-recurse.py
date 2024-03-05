@@ -5,6 +5,7 @@ import requests
 
 
 def recurse(subreddit, hot_list=[]):
+    """returning list of title of hot atricles"""
     url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
         "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
