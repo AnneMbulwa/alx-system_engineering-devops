@@ -11,7 +11,7 @@ def top_ten(subreddit):
             "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
             }
     post = {
-            'limit': 10
+            "limit": 10
             }
 
     response = requests.get(url, headers=headers, params=params,
@@ -20,4 +20,4 @@ def top_ten(subreddit):
         print("None")
         return
     result = response.json().get("data")
-    ([print(post.get("data").get("tittle"))for post in result.get("children")]
+    [print(post.get("data").get("tittle"))for post in result.get("children")]
